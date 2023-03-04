@@ -24,17 +24,17 @@
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
             <h1><a class="navbar-brand" href="#page-top"><span class="text-warning">D</span><span class="text-warning">E</span><span class="text-warning">E</span><span class="text-warning">J</span></a></h1>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <!--<button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <!--<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>-->
-                </ul>
-            </div>
+                <ul class="navbar-nav ms-auto">-->
+            <!--<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>-->
+            <!--</ul>
+            </div>-->
         </div>
     </nav>
     <!-- Masthead-->
@@ -55,27 +55,58 @@
                 </div>
 
                 <div class="col">
+
                     <div class="card" style="width:20rem; height:20rem">
+
                         <img img src="{{ url_for('static', filename='/img/deej1.jpg') }}" class="card-img-top" alt="" />
-                        <h2 class="card-title text-muted">HEYYY</h2>
-                        <div class="card-body me-auto ps-0 pt-1">
-                            <button class=" btn-primary rounded-pill btn-sm">
-                                <p class="card-text text-light">Hey just reaching out to hear more about you</p>
+                        <h3 class="card-title text-muted pb-0 mb-0">About Me</h3>
+                        <div class="card-body me-auto ps-1 pt-0 pb-0 mt-0 mb-0">
+                            <img src="{{ url_for('static', filename='/img/portfolio/african.png') }}" class="rounded-pill " alt="..." style="width: 2rem; height: 2rem ">
+
+                            <button id="text1btndots" class="btn btn-primary rounded-pill btn-sm no-click" style=" display:inline-block">
+                                <div class="snippet mx-auto" data-title="dot-flashing" style="width: 3rem; height: 1rem ">
+                                    <div class="stage  mx-auto">
+                                        <div class="dot-flashing  mx-auto"></div>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <button id="text1btn" class="btn btn-primary rounded-pill btn-sm no-click" style="display: none ">
+                                <p id="text1" class="card-text text-light">Hey! Can you tell me about yourself? </p>
 
                             </button>
-                            <button class="btn btn-primary rounded-pill btn-sm">
 
-                                <p class="card-text text-light">Hey just reaching out to hear more about you</p>
 
-                            </button>
                         </div>
 
-                        <div class="card-body ms-auto pt-0">
-
-                            <button class="btn btn-primary rounded-pill btn-sm">
-                                <p class="card-text text-light">Great these are words in a conversation</p>
-
+                        <div class="card-body ms-auto pt-0 pb-0 mt-0">
+                            <button id="text2btndots" class="btn btn-primary rounded-pill btn-sm no-click" style=" display:none">
+                                <div class="snippet mx-auto" data-title="dot-flashing" style="width: 3rem; height: 1rem ">
+                                    <div class="stage  mx-auto">
+                                        <div class="dot-flashing  mx-auto"></div>
+                                    </div>
+                                </div>
                             </button>
+
+                            <button id="text2btn" class="btn btn-primary rounded-pill btn-sm no-click" style="display: none ">
+                                <p class="card-text text-light">Sure! First off Im <span class="text-warning"> DEEJ</span> and...</p>
+                            </button>
+                            <img id="deejtextpic" src="{{ url_for('static', filename='/img/portfolio/camera.png') }}" class="rounded-pill " alt="..." style="width: 2rem; height: 2rem; display: none">
+                        </div>
+
+                        <div id="text3btndots" class="card-body ms-auto pt-0 pb-0 mt-0 mb-0 " style=" display:none">
+                            <a disabled id="text2btndots" class="link-success no-click " style=" display:inline-block">
+                                <i ></i>read more <i class="fa fa-arrow-circle-right"></i>
+                            </a>
+
+                            <button class="btn btn-primary rounded-pill btn-sm ">
+                                <div class="snippet mx-auto" data-title="dot-flashing" style="width: 3rem; height: 1rem ">
+                                    <div class="stage  mx-auto">
+                                        <div class="dot-flashing  mx-auto"></div>
+                                    </div>
+                                </div>
+                            </button>
+                            <img src="{{ url_for('static', filename='/img/portfolio/camera.png') }}" class="rounded-pill " alt="..." style="width: 2rem; height: 2rem">
                         </div>
                     </div>
 
@@ -84,32 +115,17 @@
 
                 <div class="col">
                 </div>
-                <div class="card shadow-lg" style="width:20rem; height:20rem">
-                    <div class="card-img-top">
-                        <img src="{{ url_for('static', filename='/img/deej1.jpg') }}" class="img-fluid" alt="" />
-                    </div>
-                        <h2 class="card-title text-danger"> WASSSUUP</h2>
-                        <div class="card-body me-auto ps-0">
-                            <button class="btn-primary rounded-pill btn-sm">
-                                <p class="card-text text-primary">Im just happy to be here</p>
-                            </button>
-                            <button class="btn-primary rounded-pill btn-sm pe-0">
-                                <p class="card-text text-primary">We here for a good time, not a long time</p>
-                            </button>
 
-                        </div>
-                </div>
 
             </div>
-        </div>
 
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
-        </div>
-        <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
         </div>
     </header>
 
@@ -534,13 +550,15 @@
         </div>
     </div>
     <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="{{ url_for('static', filename='/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/app.js') }}"></script>
+
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
